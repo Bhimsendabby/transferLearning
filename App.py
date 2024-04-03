@@ -1,7 +1,7 @@
 import streamlit as st
 import tensorflow as tf
 from tensorflow import keras
-import cv2
+#import cv2
 from tempfile import NamedTemporaryFile
 from PIL import Image, ImageOps
 import numpy as np
@@ -29,11 +29,11 @@ def predict_image(filename):
     #converting image to array
     img_array = tf.keras.utils.img_to_array(img_)
 
-    blur = cv2.GaussianBlur(img_array, (5, 5), 0)
+    # blur = cv2.GaussianBlur(img_array, (5, 5), 0)
 
-    img = cv2.cvtColor(blur, cv2.COLOR_BGR2RGB)
+    # img = cv2.cvtColor(blur, cv2.COLOR_BGR2RGB)
 
-    x = np.asarray(img) / 255.0
+    x = np.asarray(img_array) / 255.0
     img_processed = np.expand_dims(x, axis=0)
     img_processed /= 255.
 
