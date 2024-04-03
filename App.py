@@ -6,12 +6,6 @@ from tempfile import NamedTemporaryFile
 from PIL import Image, ImageOps
 import numpy as np
 
-#Set the page configuration for multiple page
-st.set_page_config(
-    page_title="Main",
-    page_icon="👋",
-)
-
 categories = {0:'Angry',1:'Happy',2:'Neutral',3:'Sad',4:'Surprise'}
 
 emojis = {0:':angry:',1:':smile:',2:':neutral_face:',3:':cry:',4:':frowning:'}
