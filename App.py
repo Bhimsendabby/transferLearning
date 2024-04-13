@@ -33,6 +33,7 @@ def predict_image(filename):
 
     # img = cv2.cvtColor(blur, cv2.COLOR_BGR2RGB)
 
+    # Normalizing the image data
     x = np.asarray(img_array) / 255.0
     img_processed = np.expand_dims(x, axis=0)
     img_processed /= 255.
